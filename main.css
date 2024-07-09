@@ -1,0 +1,97 @@
+body {
+    color: #213e78;
+}
+
+.content {
+    background-image: url("bg-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.navbar button p {
+    color: white;
+}
+
+.part1 {
+    height: 90vh;
+}
+
+.container-img1 {
+    background-image: url("bg-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.circle {
+    /* padding-top: 100%;  */
+    width: 85px;
+    height: 85px;
+    position: relative; /* Để sử dụng vị trí tuyệt đối cho nội dung bên trong */
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
+}
+.circle-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
+}
+
+.circle-content i {
+    color: black;
+    transition: 0.5s;
+}
+
+.circle:hover{
+    background-color: #2d6cdf;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.circle:hover .circle-content i{
+    color: white;
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+
+.part2, .part3, .part4, .part5, .part6 {
+    margin-top: 6%;
+    /* margin-bottom: 6%; */
+}
+
+.container-img2 {
+    background-image: url("bg-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    color: white;
+}
+
+/* Hiệu ứng, kết hợp với JS */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+@media (width < 980px){
+    .part1 {
+        height: auto;
+    }
+}
